@@ -51,7 +51,7 @@ const Testimonials: React.FC = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="text-white text-6xl md:text-8xl font-black mb-10 leading-none tracking-tighter"
+          className="text-white text-5xl md:text-6xl font-black mb-10 leading-none tracking-tighter"
         >
           Testimonials That<br />
           Speak to <span className="text-orange-primary">My Results</span>

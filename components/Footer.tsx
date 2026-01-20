@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto space-y-32 relative z-10">
         
         {/* Top Section */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-white/5 pb-24">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-white/5">
           <h2 className="text-white text-6xl md:text-9xl font-black tracking-tighter leading-none mb-10 md:mb-0">
             Let's <span className="text-orange-primary">Collaborate</span>.
           </h2>
