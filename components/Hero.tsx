@@ -61,7 +61,7 @@ const Hero: React.FC = () => {
       <motion.div 
         animate={{ y: [0, 20, 0], rotate: [0, -5, 0] }} 
         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute bottom-[5%] right-[5%] hidden lg:block p-5 bg-white shadow-[0_20px_50px_rgba(0,0,0,0.05)] rounded-3xl border border-gray-100 z-10"
+        className="absolute bottom-[2%] right-[5%] hidden lg:block p-5 bg-white shadow-[0_20px_50px_rgba(0,0,0,0.05)] rounded-3xl border border-gray-100 z-10"
       >
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 bg-[#111111] rounded-xl flex items-center justify-center text-white">
@@ -89,12 +89,12 @@ const Hero: React.FC = () => {
         </motion.div>
         
         {/* Title Group */}
-        <div className="text-center px-4 w-full">
+        <div className="text-center px-4 w-full ">
           <motion.div
             initial={{ y: 40, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
-            className="flex flex-col items-center"
+            className="flex flex-col items-center pb-20"
           >
             <h1 className="text-[16vw] sm:text-[12vw] lg:text-[140px] font-black tracking-tighter text-[#111111] leading-[0.8] uppercase flex flex-col">
               <span className="block italic text-orange-primary drop-shadow-sm">Shahzaib</span>
