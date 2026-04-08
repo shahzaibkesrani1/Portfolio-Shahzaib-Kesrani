@@ -55,6 +55,9 @@ const Footer: React.FC = () => {
               <a href="https://wa.me/923282719635" target="_blank" rel="noopener noreferrer" className="w-14 h-14 border border-white/10 rounded-full flex items-center justify-center text-gray-500 hover:text-orange-primary hover:border-orange-primary hover:bg-orange-primary/5 transition-all">
                 <MessageCircle size={22} />
               </a>
+              <a href="https://www.instagram.com/shahzaibthewebdev/" target="_blank" rel="noopener noreferrer" className="w-14 h-14 border border-white/10 rounded-full flex items-center justify-center text-gray-500 hover:text-orange-primary hover:border-orange-primary hover:bg-orange-primary/5 transition-all">
+                <Instagram size={22} />
+              </a>
             </div>
           </div>
 

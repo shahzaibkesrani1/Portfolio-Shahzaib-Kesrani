@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 // Fixed missing ArrowUpRight import from lucide-react
 import { Code, Terminal, Rocket, Search, ArrowUpRight } from 'lucide-react';
 // @ts-ignore
-import myImg from '../assets/Myimg.png';
+import myImg from '../assets/Myimg.jpeg';
 
 const WhyHireMe: React.FC = () => {
   return (
