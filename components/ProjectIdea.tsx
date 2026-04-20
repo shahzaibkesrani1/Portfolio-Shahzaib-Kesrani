@@ -138,7 +138,7 @@ const ProjectIdea: React.FC = () => {
             <div className="p-2 bg-gray-50 rounded-lg group-hover:bg-orange-primary/10 transition-colors">
               <Award className="w-6 h-6 fill-[#111111] text-[#111111]" />
             </div>
-            <span className="font-black text-lg tracking-tight">2+ Years Experience</span>
+            <span className="font-black text-lg tracking-tight">3+ Years Experience</span>
           </div>
           <div className="flex items-center space-x-3 group">
             <div className="p-2 bg-gray-50 rounded-lg group-hover:bg-orange-primary/10 transition-colors">

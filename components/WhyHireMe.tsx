@@ -10,23 +10,23 @@ const WhyHireMe: React.FC = () => {
   return (
     <section id="about" className="py-24 md:py-32 px-6 overflow-hidden">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-24">
-        
+
         {/* Visual Content */}
         <div className="relative lg:w-2/5 flex justify-center order-2 lg:order-1">
-          <motion.div 
+          <motion.div
             initial={{ scale: 0.9, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             transition={{ type: 'spring', duration: 1 }}
             viewport={{ once: true }}
             className="relative w-full max-w-[400px] group"
           >
-            <img 
+            <img
               src={myImg}
-              alt="Shahzaib at work" 
+              alt="Shahzaib at work"
               className="w-full h-full object-cover"
             />
             <div className="absolute bottom-8 left-8 bg-white p-6 rounded-3xl z-20 border-2 border-orange-primary shadow-lg">
-              <div className="text-4xl font-black text-[#111111]">2+</div>
+              <div className="text-4xl font-black text-[#111111]">3+</div>
               <div className="text-[10px] font-black uppercase text-gray-400 tracking-widest">Years Experience</div>
             </div>
           </motion.div>
@@ -51,29 +51,29 @@ const WhyHireMe: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full">
             {[
-{ 
-  icon: Code, 
-  title: 'Scalable Front-end Development', 
-  desc: 'Designing clean, modular, and scalable component systems that are easy to maintain and grow with your product.' 
-},
-{ 
-  icon: Rocket, 
-  title: 'Fast & Reliable Delivery', 
-  desc: 'Shipping production-ready features efficiently without compromising code quality or performance.' 
-},
-{ 
-  icon: Search, 
-  title: 'Pixel-Perfect Implementation', 
-  desc: 'Translating designs into precise, responsive interfaces with smooth animations and attention to detail.' 
-},
-{ 
-  icon: Terminal, 
-  title: 'Strategic Technical Decisions', 
-  desc: 'Selecting the right tools and technologies to support long-term stability, performance, and business goals.' 
-},
+              {
+                icon: Code,
+                title: 'Scalable Front-end Development',
+                desc: 'Designing clean, modular, and scalable component systems that are easy to maintain and grow with your product.'
+              },
+              {
+                icon: Rocket,
+                title: 'Fast & Reliable Delivery',
+                desc: 'Shipping production-ready features efficiently without compromising code quality or performance.'
+              },
+              {
+                icon: Search,
+                title: 'Pixel-Perfect Implementation',
+                desc: 'Translating designs into precise, responsive interfaces with smooth animations and attention to detail.'
+              },
+              {
+                icon: Terminal,
+                title: 'Strategic Technical Decisions',
+                desc: 'Selecting the right tools and technologies to support long-term stability, performance, and business goals.'
+              },
 
             ].map((item, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -89,13 +89,21 @@ const WhyHireMe: React.FC = () => {
                   <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
                 </div>
               </motion.div>
-            ))} 
+            ))}
           </div>
 
-          <div className="flex justify-center">
-            <motion.a 
-              href="#contact"
+          <div className="flex justify-center gap-3">
+            <motion.a
+              href="/ShahzaibKesrani.pdf"  
+              download="Shahzaib Kesrani Frontend developer.pdf" 
               className="inline-flex px-8 py-4 rounded-full bg-[#111111] text-white font-black text-lg transition-all items-center space-x-3 uppercase tracking-tighter"
+            >
+              <span>My &nbsp; Resume</span>
+              <ArrowUpRight size={18} />
+            </motion.a>
+            <motion.a
+              href="#contact"
+              className="inline-flex px-8 py-4 rounded-full  bg-orange-primary hover:bg-orange-600 text-white text-lg transition-all items-center space-x-3 uppercase tracking-tighter"
             >
               <span>Hire &nbsp; Me</span>
               <ArrowUpRight size={18} />

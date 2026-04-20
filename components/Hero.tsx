@@ -158,7 +158,7 @@ const Hero: React.FC = () => {
             className="hidden lg:flex flex-col items-end gap-8 z-30"
           >
             <div className="text-right space-y-2">
-              <h3 className="text-4xl font-black text-[#111111] leading-none tracking-tighter">2+ Years</h3>
+              <h3 className="text-4xl font-black text-[#111111] leading-none tracking-tighter">3+ Years</h3>
               <p className="text-gray-400 font-extrabold uppercase tracking-[0.3em] text-[10px]">Building Digital Solutions</p>
             </div>
             <div className="flex flex-col gap-3 items-end">
@@ -195,7 +195,7 @@ const Hero: React.FC = () => {
             <div className="flex flex-col gap-3 items-center">
               <div className="text-xs font-black uppercase tracking-[0.2em] text-[#111111] border-b-2 border-orange-primary pb-1">Core Tech</div>
               <div className="flex flex-wrap gap-2 justify-center">
-                {['React', 'Next.js', 'Node'].map(tech => (
+                {['React.js', 'Next.js'].map(tech => (
                   <span key={tech} className="px-3 py-1.5 bg-gray-50 border border-gray-100 rounded-xl text-[10px] font-black uppercase text-gray-500 shadow-sm">{tech}</span>
                 ))}
               </div>
