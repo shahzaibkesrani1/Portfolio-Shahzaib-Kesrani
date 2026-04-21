@@ -92,15 +92,15 @@ const WhyHireMe: React.FC = () => {
             ))}
           </div>
 
-          <div className="flex justify-center gap-3">
-            <motion.a
+          <div className="flex justify-center">
+            {/* <motion.a
               href="/ShahzaibKesrani.pdf"  
               download="Shahzaib Kesrani Frontend developer.pdf" 
               className="inline-flex px-8 py-4 rounded-full bg-[#111111] text-white font-black text-lg transition-all items-center space-x-3 uppercase tracking-tighter"
             >
               <span>My &nbsp; Resume</span>
               <ArrowUpRight size={18} />
-            </motion.a>
+            </motion.a> */}
             <motion.a
               href="#contact"
               className="inline-flex px-8 py-4 rounded-full  bg-orange-primary hover:bg-orange-600 text-white text-lg transition-all items-center space-x-3 uppercase tracking-tighter"
