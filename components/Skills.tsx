@@ -1,26 +1,38 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Layers, Globe, Zap, Code2 } from 'lucide-react';
+import { Layers, Globe, Zap, Code2, ShoppingBag, Server } from 'lucide-react';
 
 const mainSkills = [
   { name: 'React.js & Next.js', level: '95%', icon: Layers },
-  { name: 'JavaScript (ES6+)', level: '92%', icon: Code2 },
-  { name: 'Tailwind CSS', level: '98%', icon: Zap },
-  { name: 'AI API Integration', level: '88%', icon: Globe },
+  { name: 'JavaScript & TypeScript', level: '92%', icon: Code2 },
+  { name: 'Tailwind CSS & Bootstrap', level: '98%', icon: Zap },
+  { name: 'Shopify & WordPress', level: '90%', icon: ShoppingBag },
+  { name: 'Node.js & Express.js', level: '85%', icon: Server },
+  { name: 'Firebase & REST APIs', level: '88%', icon: Globe },
 ];
 
 const subSkills = [
-  'HTML5 & CSS3', 'Responsive Design', 'Performance Optimization', 'SEO', 
-  'REST APIs', 'State Management', 'Git & GitHub', 'Accessibility',
-  'UI/UX Design', 'Scalable Development'
+  'HTML5 & CSS3',
+  'Shopify Liquid',
+  'Elementor Pro',
+  'WooCommerce',
+  'Redux Toolkit',
+  'Responsive Design',
+  'Performance Optimization',
+  'REST API Integration',
+  'Firebase Auth & Firestore',
+  'Git & GitHub',
+  'Vercel & Deployment',
+  'Figma',
+  'SEO',
+  'Accessibility',
 ];
 
 const Skills: React.FC = () => {
   return (
     <section id="skills" className="py-24 md:py-32 px-6 bg-[#111111] rounded-[60px] md:rounded-[80px] mx-4 my-8 relative overflow-hidden">
       <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-orange-primary/10 rounded-full blur-[120px] pointer-events-none" />
-      
+
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-20 items-start relative z-10">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -35,12 +47,15 @@ const Skills: React.FC = () => {
             </h2>
           </div>
           <p className="text-gray-400 text-xl font-bold leading-relaxed max-w-md">
-            Building intelligent, scalable, and high-performance web experiences powered by clean code and AI innovation. Specializing in React.js, Next.js, and AI-powered features to deliver exceptional user experiences.
+            Building fast, clean, and maintainable web products — from React & Next.js apps to Shopify stores, WordPress sites, and Node.js backends. I pick the right tool for the job and deliver code that lasts.
           </p>
-          
+
           <div className="flex flex-wrap gap-3">
             {subSkills.map((s, i) => (
-              <span key={i} className="px-5 py-2 rounded-full border border-white/10 text-white/60 font-bold text-sm hover:border-orange-primary hover:text-white transition-all cursor-default">
+              <span
+                key={i}
+                className="px-5 py-2 rounded-full border border-white/10 text-white/60 font-bold text-sm hover:border-orange-primary hover:text-white transition-all cursor-default"
+              >
                 {s}
               </span>
             ))}
@@ -61,14 +76,16 @@ const Skills: React.FC = () => {
                 <div className="w-16 h-16 bg-orange-primary/20 rounded-2xl flex items-center justify-center text-orange-primary group-hover:bg-orange-primary group-hover:text-white transition-all">
                   <skill.icon size={32} />
                 </div>
-                <span className="text-3xl font-black text-white/20 group-hover:text-orange-primary/40 transition-colors tracking-tighter">{skill.level}</span>
+                <span className="text-3xl font-black text-white/20 group-hover:text-orange-primary/40 transition-colors tracking-tighter">
+                  {skill.level}
+                </span>
               </div>
               <h3 className="text-2xl font-black text-white mb-4">{skill.name}</h3>
               <div className="h-2 w-full bg-white/10 rounded-full overflow-hidden">
                 <motion.div
                   initial={{ width: 0 }}
                   whileInView={{ width: skill.level }}
-                  transition={{ duration: 1.5, ease: "easeOut" }}
+                  transition={{ duration: 1.5, ease: 'easeOut' }}
                   viewport={{ once: true }}
                   className="h-full bg-orange-primary"
                 />
