@@ -3,12 +3,36 @@ import { motion } from 'framer-motion';
 import { Layers, Globe, Zap, Code2, ShoppingBag, Server } from 'lucide-react';
 
 const mainSkills = [
-  { name: 'React.js & Next.js', level: '95%', icon: Layers },
-  { name: 'JavaScript & TypeScript', level: '92%', icon: Code2 },
-  { name: 'Tailwind CSS & Bootstrap', level: '98%', icon: Zap },
-  { name: 'Shopify & WordPress', level: '90%', icon: ShoppingBag },
-  { name: 'Node.js & Express.js', level: '85%', icon: Server },
-  { name: 'Firebase & REST APIs', level: '88%', icon: Globe },
+  {
+    name: 'React.js & Next.js',
+    note: 'Primary stack — used in every production build',
+    icon: Layers,
+  },
+  {
+    name: 'JavaScript & TypeScript',
+    note: 'Core language; TypeScript on every new project',
+    icon: Code2,
+  },
+  {
+    name: 'Tailwind CSS & Bootstrap',
+    note: 'Default styling approach across all builds',
+    icon: Zap,
+  },
+  {
+    name: 'Shopify & WordPress',
+    note: 'Custom themes — Liquid, PHP, and Elementor',
+    icon: ShoppingBag,
+  },
+  {
+    name: 'Node.js & Express.js',
+    note: 'REST APIs and lightweight backend services',
+    icon: Server,
+  },
+  {
+    name: 'Firebase & REST APIs',
+    note: 'Auth, Firestore, and third-party integrations',
+    icon: Globe,
+  },
 ];
 
 const subSkills = [
@@ -30,30 +54,37 @@ const subSkills = [
 
 const Skills: React.FC = () => {
   return (
-    <section id="skills" className="py-24 md:py-32 px-6 bg-[#111111] rounded-[60px] md:rounded-[80px] mx-4 my-8 relative overflow-hidden">
-      <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-orange-primary/10 rounded-full blur-[120px] pointer-events-none" />
+    <section
+      id="skills"
+      className="py-24 md:py-32 px-6 bg-[#111111] rounded-[60px] md:rounded-[80px] mx-4 my-8 relative overflow-hidden"
+    >
+      <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-orange-primary/[0.08] rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-20 items-start relative z-10">
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
+          initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           className="space-y-10"
         >
           <div className="space-y-4">
-            <h4 className="text-orange-primary font-black uppercase tracking-[0.4em] text-xs">Technical Arsenal</h4>
+            <p className="font-mono text-orange-primary text-xs uppercase tracking-[0.3em]">
+              Technical arsenal
+            </p>
             <h2 className="text-6xl md:text-8xl font-black tracking-tighter leading-[0.85] text-white">
               My <span className="text-orange-primary">Stack</span> & Expertise
             </h2>
           </div>
           <p className="text-gray-400 text-xl font-bold leading-relaxed max-w-md">
-            Building fast, clean, and maintainable web products — from React & Next.js apps to Shopify stores, WordPress sites, and Node.js backends. I pick the right tool for the job and deliver code that lasts.
+            Building fast, clean, and maintainable web products — from React & Next.js apps to
+            Shopify stores, WordPress sites, and Node.js backends. I pick the right tool for the
+            job and deliver code that lasts.
           </p>
 
           <div className="flex flex-wrap gap-3">
-            {subSkills.map((s, i) => (
+            {subSkills.map((s) => (
               <span
-                key={i}
+                key={s}
                 className="px-5 py-2 rounded-full border border-white/10 text-white/60 font-bold text-sm hover:border-orange-primary hover:text-white transition-all cursor-default"
               >
                 {s}
@@ -62,34 +93,21 @@ const Skills: React.FC = () => {
           </div>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {mainSkills.map((skill, idx) => (
             <motion.div
               key={skill.name}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: idx * 0.1 }}
+              transition={{ delay: idx * 0.08 }}
               viewport={{ once: true }}
-              className="bg-white/5 border border-white/10 p-10 rounded-[40px] group hover:border-orange-primary transition-colors"
+              className="bg-white/[0.03] border border-white/10 p-8 rounded-3xl group hover:border-orange-primary/50 transition-colors"
             >
-              <div className="flex justify-between items-start mb-12">
-                <div className="w-16 h-16 bg-orange-primary/20 rounded-2xl flex items-center justify-center text-orange-primary group-hover:bg-orange-primary group-hover:text-white transition-all">
-                  <skill.icon size={32} />
-                </div>
-                <span className="text-3xl font-black text-white/20 group-hover:text-orange-primary/40 transition-colors tracking-tighter">
-                  {skill.level}
-                </span>
+              <div className="w-14 h-14 bg-orange-primary/15 rounded-2xl flex items-center justify-center text-orange-primary group-hover:bg-orange-primary group-hover:text-white transition-all mb-8">
+                <skill.icon size={26} />
               </div>
-              <h3 className="text-2xl font-black text-white mb-4">{skill.name}</h3>
-              <div className="h-2 w-full bg-white/10 rounded-full overflow-hidden">
-                <motion.div
-                  initial={{ width: 0 }}
-                  whileInView={{ width: skill.level }}
-                  transition={{ duration: 1.5, ease: 'easeOut' }}
-                  viewport={{ once: true }}
-                  className="h-full bg-orange-primary"
-                />
-              </div>
+              <h3 className="text-xl font-black text-white mb-2">{skill.name}</h3>
+              <p className="text-gray-500 text-sm leading-relaxed font-medium">{skill.note}</p>
             </motion.div>
           ))}
         </div>
