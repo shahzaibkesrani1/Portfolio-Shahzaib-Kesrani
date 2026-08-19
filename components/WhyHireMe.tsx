@@ -102,15 +102,6 @@ const WhyHireMe: React.FC = () => {
               <span>Hire Me</span>
               <ArrowUpRight size={18} />
             </a>
-            {/* Requires ShahzaibKesrani.pdf placed in /public */}
-            <a
-              href="/ShahzaibKesrani.pdf"
-              download="Shahzaib Kesrani - Frontend Developer.pdf"
-              className="inline-flex px-8 py-4 rounded-full border-2 border-[#111111] text-[#111111] text-lg font-black transition-all items-center gap-3 uppercase tracking-tighter hover:bg-[#111111] hover:text-white"
-            >
-              <span>Resume</span>
-              <Download size={18} />
-            </a>
           </div>
         </div>
       </div>
